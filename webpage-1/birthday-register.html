@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>🎂 Birthday & Anniversary Registration — Art of Living Bhiwadi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:linear-gradient(135deg,#fff8fc 0%,#fff0f9 50%,#f8f0ff 100%);min-height:100vh;padding:1.5rem 1rem;}
+.page-wrap{max-width:560px;margin:0 auto;}
+
+/* Header */
+.form-header{text-align:center;padding:2rem 1rem 1.5rem;background:linear-gradient(135deg,#FCE4EC,#F8BBD9,#EDE7F6);border-radius:20px;margin-bottom:1.5rem;box-shadow:0 4px 20px rgba(233,30,140,0.15);}
+.form-header-icon{font-size:48px;margin-bottom:0.5rem;}
+.form-header-org{font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#880045;margin-bottom:0.5rem;}
+.form-header-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#6A0035;line-height:1.2;margin-bottom:0.5rem;}
+.form-header-sub{font-size:13px;color:#C2185B;line-height:1.7;font-weight:300;}
+
+/* Info strip */
+.info-strip{background:#fff;border:1.5px solid #F48FB1;border-radius:12px;padding:1rem 1.2rem;margin-bottom:1.5rem;display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#880045;line-height:1.7;}
+.info-strip-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+
+/* Form card */
+.form-card{background:#fff;border:1.5px solid #F48FB1;border-radius:20px;padding:1.8rem 1.6rem;box-shadow:0 4px 24px rgba(233,30,140,0.10);}
+.form-section-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#880045;margin-bottom:1.2rem;padding-bottom:0.6rem;border-bottom:1.5px solid #FCE4EC;display:flex;align-items:center;gap:8px;}
+
+/* Fields */
+.field{margin-bottom:1.1rem;}
+.label{display:block;font-size:11px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:#880045;margin-bottom:5px;}
+.label .req{color:#C0392B;}
+.label .opt{font-size:10px;color:#aaa;font-weight:400;text-transform:none;letter-spacing:0;}
+input[type=text],input[type=tel],input[type=email],input[type=number],select,textarea{
+  width:100%;padding:11px 13px;border:1.5px solid #F48FB1;border-radius:9px;
+  font-size:14px;font-family:'Jost',sans-serif;color:#1a1a1a;background:#fff;
+  outline:none;transition:border-color 0.2s,box-shadow 0.2s;
+}
+input:focus,select:focus,textarea:focus{border-color:#E91E8C;box-shadow:0 0 0 3px rgba(233,30,140,0.10);}
+textarea{resize:vertical;min-height:70px;}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+
+/* Date helper */
+.date-hint{font-size:11px;color:#aaa;margin-top:4px;}
+
+/* Divider */
+.field-divider{border:none;border-top:1.5px dashed #FCE4EC;margin:1.4rem 0;}
+
+/* Submit */
+.submit-btn{background:linear-gradient(135deg,#E91E8C,#C2185B);color:#fff;border:none;border-radius:12px;padding:15px;font-size:15px;font-weight:600;font-family:'Jost',sans-serif;cursor:pointer;width:100%;letter-spacing:0.06em;transition:all 0.2s;box-shadow:0 4px 18px rgba(233,30,140,0.30);margin-top:0.5rem;}
+.submit-btn:hover{background:linear-gradient(135deg,#C2185B,#880045);transform:translateY(-1px);}
+.submit-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+
+/* Messages */
+.success-msg{display:none;background:#E8F5E9;border:1.5px solid #4CAF50;border-radius:12px;padding:1.4rem;margin-top:1.2rem;text-align:center;}
+.success-msg.show{display:block;}
+.success-icon{font-size:40px;margin-bottom:0.5rem;}
+.success-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#2E7D32;margin-bottom:0.4rem;}
+.success-sub{font-size:13px;color:#388E3C;line-height:1.7;}
+.error-msg{display:none;background:#FFEBEE;border:1.5px solid #EF9A9A;border-radius:10px;padding:1rem 1.2rem;margin-top:1rem;font-size:13px;color:#C62828;line-height:1.7;}
+.error-msg.show{display:block;}
+
+/* Footer */
+.form-footer{text-align:center;margin-top:1.5rem;padding:1.2rem;background:linear-gradient(135deg,#FCE4EC,#F8BBD9);border-radius:14px;}
+.form-footer p{font-size:12px;color:#880045;line-height:1.8;}
+.form-footer strong{color:#6A0035;}
+.wa-contact{display:inline-flex;align-items:center;gap:6px;background:#25D366;color:#fff;border-radius:20px;padding:8px 18px;font-size:12px;font-weight:600;text-decoration:none;margin-top:8px;transition:all 0.2s;}
+.wa-contact:hover{background:#128C7E;}
+
+/* Progress indicator */
+.step-info{font-size:12px;color:#E91E8C;text-align:center;margin-bottom:1.2rem;font-weight:500;}
+
+@media(max-width:400px){
+  .three-col{grid-template-columns:1fr 1fr;}
+  .two-col{grid-template-columns:1fr;}
+  .form-card{padding:1.4rem 1.2rem;}
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- Header -->
+  <div class="form-header">
+    <div class="form-header-icon">🎂💍🙏</div>
+    <div class="form-header-org">Art of Living · Bhiwadi</div>
+    <h1 class="form-header-title">Birthday &amp; Anniversary<br>Registration</h1>
+    <p class="form-header-sub">Register your details so our AoL Bhiwadi family<br>can celebrate your special days with you! 🪷</p>
+  </div>
+
+  <!-- Info strip -->
+  <div class="info-strip">
+    <div class="info-strip-icon">💡</div>
+    <div>Once registered, our team will send you warm birthday &amp; anniversary wishes via WhatsApp. Your details are stored securely and used only for celebration purposes within the AoL Bhiwadi family. <strong>Jai Gurudev! 🙏</strong></div>
+  </div>
+
+  <!-- Form -->
+  <div class="form-card">
+    <div class="step-info">📝 Fill all required fields marked with *</div>
+
+    <!-- Personal Details -->
+    <div class="form-section-title">👤 Personal Details</div>
+
+    <div class="field">
+      <label class="label" for="f-name">Full Name <span class="req">*</span></label>
+      <input type="text" id="f-name" placeholder="Enter your full name" autocomplete="name"/>
+    </div>
+
+    <div class="two-col">
+      <div class="field">
+        <label class="label" for="f-phone">Mobile Number <span class="req">*</span></label>
+        <input type="tel" id="f-phone" placeholder="10-digit number" maxlength="10" autocomplete="tel" inputmode="numeric"/>
+      </div>
+      <div class="field">
+        <label class="label" for="f-email">Email <span class="opt">(optional)</span></label>
+        <input type="email" id="f-email" placeholder="your@email.com" autocomplete="email"/>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="f-address">Address / Locality <span class="req">*</span></label>
+      <input type="text" id="f-address" placeholder="e.g. Ashiana Town, Bhiwadi" autocomplete="street-address"/>
+    </div>
+
+    <hr class="field-divider"/>
+
+    <!-- Date of Birth -->
+    <div class="form-section-title">🎂 Date of Birth</div>
+
+    <div class="field">
+      <label class="label">Birthday — Day, Month &amp; Year <span class="req">*</span></label>
+      <div class="three-col">
+        <select id="f-dob-day">
+          <option value="">Day</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+          <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+          <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+          <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+          <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+          <option>31</option>
+        </select>
+        <select id="f-dob-month">
+          <option value="">Month</option>
+          <option value="1">January</option><option value="2">February</option>
+          <option value="3">March</option><option value="4">April</option>
+          <option value="5">May</option><option value="6">June</option>
+          <option value="7">July</option><option value="8">August</option>
+          <option value="9">September</option><option value="10">October</option>
+          <option value="11">November</option><option value="12">December</option>
+        </select>
+        <input type="number" id="f-dob-year" placeholder="Year" min="1920" max="2020" inputmode="numeric"/>
+      </div>
+      <div class="date-hint">💡 Year is optional — day and month are required</div>
+    </div>
+
+    <hr class="field-divider"/>
+
+    <!-- Anniversary -->
+    <div class="form-section-title">💍 Wedding Anniversary <span style="font-size:13px;font-weight:400;color:#aaa;font-style:italic;">(optional)</span></div>
+
+    <div class="field">
+      <label class="label">Anniversary — Day, Month &amp; Year <span class="opt">(optional)</span></label>
+      <div class="three-col">
+        <select id="f-ann-day">
+          <option value="">Day</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+          <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+          <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+          <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+          <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+          <option>31</option>
+        </select>
+        <select id="f-ann-month">
+          <option value="">Month</option>
+          <option value="1">January</option><option value="2">February</option>
+          <option value="3">March</option><option value="4">April</option>
+          <option value="5">May</option><option value="6">June</option>
+          <option value="7">July</option><option value="8">August</option>
+          <option value="9">September</option><option value="10">October</option>
+          <option value="11">November</option><option value="12">December</option>
+        </select>
+        <input type="number" id="f-ann-year" placeholder="Year" min="1950" max="2025" inputmode="numeric"/>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <button class="submit-btn" id="submit-btn" onclick="submitForm()">
+      🎂 Register My Details
+    </button>
+
+    <div class="success-msg" id="success-msg">
+      <div class="success-icon">🎉</div>
+      <div class="success-title">Successfully Registered!</div>
+      <div class="success-sub">
+        Thank you! Your details have been saved.<br>
+        The Art of Living Bhiwadi family will celebrate your special days with you.<br><br>
+        <strong>Jai Gurudev! 🙏🪷</strong>
+      </div>
+    </div>
+    <div class="error-msg" id="error-msg"></div>
+  </div>
+
+  <!-- Footer -->
+  <div class="form-footer">
+    <p>
+      <strong>Art of Living · Bhiwadi</strong><br>
+      Facilitated by Ashish Kumar Ji<br>
+      📞 +91 97722 08636
+    </p>
+    <a class="wa-contact" href="https://wa.me/919772208636" target="_blank">
+      💬 Contact on WhatsApp
+    </a>
+  </div>
+
+</div><!-- end page-wrap -->
+
+<script>
+  // ═══════════════════════════════════════════════════════
+  // GOOGLE APPS SCRIPT URL
+  // Replace the URL below with your deployed Apps Script URL.
+  // Steps to set up:
+  //   1. Open your Google Sheet
+  //   2. Extensions → Apps Script
+  //   3. Paste the doPost() code (see instructions)
+  //   4. Deploy as Web App → Anyone can access
+  //   5. Copy the URL and paste it below
+  // ═══════════════════════════════════════════════════════
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz1nXnhRCORI5HWHzrPqVnMo95rxzbVcxS3j63TXtK1oOpxFnHEmK0eIJSFkq0SC0AQ/exec';
+
+  const MONTHS = ['','January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+
+  function validateForm() {
+    const name    = document.getElementById('f-name').value.trim();
+    const phone   = document.getElementById('f-phone').value.trim();
+    const address = document.getElementById('f-address').value.trim();
+    const dobDay  = document.getElementById('f-dob-day').value;
+    const dobMon  = document.getElementById('f-dob-month').value;
+    const errDiv  = document.getElementById('error-msg');
+
+    errDiv.className = 'error-msg';
+
+    if (!name) {
+      errDiv.textContent = '⚠️ Please enter your full name.';
+      errDiv.className = 'error-msg show';
+      document.getElementById('f-name').focus();
+      return false;
+    }
+    if (!phone || phone.length !== 10 || !/^\d+$/.test(phone)) {
+      errDiv.textContent = '⚠️ Please enter a valid 10-digit mobile number.';
+      errDiv.className = 'error-msg show';
+      document.getElementById('f-phone').focus();
+      return false;
+    }
+    if (!address) {
+      errDiv.textContent = '⚠️ Please enter your address / locality.';
+      errDiv.className = 'error-msg show';
+      document.getElementById('f-address').focus();
+      return false;
+    }
+    if (!dobDay || !dobMon) {
+      errDiv.textContent = '⚠️ Please select your Birthday day and month.';
+      errDiv.className = 'error-msg show';
+      document.getElementById('f-dob-day').focus();
+      return false;
+    }
+    return true;
+  }
+
+  function submitForm() {
+    if (!validateForm()) return;
+
+    const name    = document.getElementById('f-name').value.trim();
+    const phone   = document.getElementById('f-phone').value.trim();
+    const email   = document.getElementById('f-email').value.trim();
+    const address = document.getElementById('f-address').value.trim();
+    const dobDay  = document.getElementById('f-dob-day').value;
+    const dobMon  = document.getElementById('f-dob-month').value;
+    const dobYear = document.getElementById('f-dob-year').value || '';
+    const annDay  = document.getElementById('f-ann-day').value || '';
+    const annMon  = document.getElementById('f-ann-month').value || '';
+    const annYear = document.getElementById('f-ann-year').value || '';
+
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.textContent = '⏳ Registering...';
+
+    const dob = dobDay + ' ' + MONTHS[parseInt(dobMon)] + (dobYear ? ' ' + dobYear : '');
+    const ann = (annDay && annMon) ? (annDay + ' ' + MONTHS[parseInt(annMon)] + (annYear ? ' ' + annYear : '')) : '';
+
+    const payload = {
+      timestamp : new Date().toLocaleString('en-IN', {timeZone:'Asia/Kolkata'}),
+      name      : name,
+      phone     : phone,
+      email     : email,
+      address   : address,
+      dob_day   : dobDay,
+      dob_month : dobMon,
+      dob_year  : dobYear,
+      dob_full  : dob,
+      ann_day   : annDay,
+      ann_month : annMon,
+      ann_year  : annYear,
+      ann_full  : ann
+    };
+
+    // ── Submitting to Google Sheets ──
+        const params = new URLSearchParams();
+    Object.keys(payload).forEach(k => params.append(k, payload[k]));
+    fetch(SCRIPT_URL + '?' + params.toString(), { method: 'GET', mode: 'no-cors' })
+    .then(() => {
+      btn.disabled = false;
+      btn.textContent = '🎂 Register My Details';
+      document.getElementById('success-msg').className = 'success-msg show';
+      document.getElementById('error-msg').className   = 'error-msg';
+      // scroll to success
+      document.getElementById('success-msg').scrollIntoView({behavior:'smooth', block:'center'});
+      // clear form
+      ['f-name','f-phone','f-email','f-address','f-dob-year','f-ann-year'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      ['f-dob-day','f-dob-month','f-ann-day','f-ann-month'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+    })
+    .catch(err => {
+      btn.disabled = false;
+      btn.textContent = '🎂 Register My Details';
+      const errDiv = document.getElementById('error-msg');
+      errDiv.textContent = '⚠️ Could not connect. Please try again or contact Ashish Ji on WhatsApp.';
+      errDiv.className = 'error-msg show';
+    });
+  }
+
+  // Allow Enter key to submit
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+      submitForm();
+    }
+  });
+</script>
+</body>
+</html>

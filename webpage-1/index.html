@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ashish Kumar — Art of Living Faculty · Bhiwadi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--green:#1D9E75;--green-dark:#0F6E56;--green-deeper:#085041;--green-light:#E1F5EE;--green-mid:#9FE1CB;--green-border:#5DCAA5;--purple:#534AB7;--purple-dark:#3C3489;--purple-light:#EEEDFE;--purple-border:#AFA9EC;--amber-text:#854F0B;--amber-border:#EF9F27;--rose-light:#FAECE7;--rose-text:#993C1D;--text:#1a1a1a;--text-muted:#5a5a5a;--text-faint:#999;--bg:#fff;--bg-soft:#f7f6f2;--bg-subtle:#fafaf9;--border:rgba(0,0,0,0.10);--border-soft:rgba(0,0,0,0.07);--radius:14px;--radius-lg:20px;--shadow-sm:0 2px 12px rgba(0,0,0,0.06);--shadow-md:0 6px 24px rgba(0,0,0,0.10);--shadow-green:0 4px 20px rgba(29,158,117,0.18);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;color:var(--text);background:var(--bg-subtle);line-height:1.65;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}img{max-width:100%;display:block;}
+nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-soft);padding:0.75rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;box-shadow:var(--shadow-sm);}
+.nav-left{display:flex;align-items:center;gap:14px;}.nav-logo-box{width:50px;height:50px;border-radius:10px;overflow:hidden;flex-shrink:0;border:1.5px solid var(--green-border);background:var(--green-light);display:flex;align-items:center;justify-content:center;}
+.nav-logo-box img{width:100%;height:100%;object-fit:contain;}.nav-logo-emoji{font-size:22px;}
+.nav-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;line-height:1.1;}
+.nav-role{font-size:10px;color:var(--green);font-weight:500;letter-spacing:0.12em;text-transform:uppercase;margin-top:1px;}
+.nav-links{display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap;}.nav-links a{font-size:12px;color:var(--text-muted);font-weight:400;transition:color 0.2s;}.nav-links a:hover{color:var(--green);}
+.nav-cta{background:#E91E8C;color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:12px;font-weight:600;font-family:'Jost',sans-serif;cursor:pointer;letter-spacing:0.06em;transition:all 0.2s;text-decoration:none;display:inline-block;}
+.nav-cta:hover{background:#C2185B;transform:translateY(-1px);}
+.wrap{max-width:940px;margin:0 auto;padding:0 1.5rem;}section{margin-bottom:5rem;}
+.hero{padding:5rem 0 4rem;text-align:center;border-bottom:1px solid var(--border-soft);margin-bottom:4rem;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:1.2rem;background:var(--green-light);border:1px solid var(--green-border);padding:5px 16px;border-radius:20px;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,60px);font-weight:600;line-height:1.08;margin-bottom:1.2rem;}
+.hero h1 em{font-style:italic;color:var(--green);}
+.hero-sub{font-size:15.5px;color:var(--text-muted);max-width:500px;margin:0 auto 2.2rem;line-height:1.85;font-weight:300;}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{background:var(--green);color:#fff;border:none;border-radius:10px;padding:13px 30px;font-size:14px;font-weight:500;font-family:'Jost',sans-serif;cursor:pointer;letter-spacing:0.05em;transition:all 0.2s;text-decoration:none;display:inline-block;box-shadow:var(--shadow-green);}
+.btn-primary:hover{background:var(--green-dark);transform:translateY(-2px);}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border);border-radius:10px;padding:13px 30px;font-size:14px;font-weight:400;font-family:'Jost',sans-serif;cursor:pointer;letter-spacing:0.05em;transition:all 0.2s;text-decoration:none;display:inline-block;}
+.btn-outline:hover{border-color:var(--green);color:var(--green);}
+.divider{display:flex;align-items:center;justify-content:center;gap:12px;margin:2.5rem 0 0;}
+.divider-line{width:50px;height:0.5px;background:var(--border);}.divider-dot{width:5px;height:5px;border-radius:50%;background:var(--green);}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:4.5rem;}
+.stat-card{background:var(--bg);border:1px solid var(--border-soft);border-radius:var(--radius);padding:1.5rem;text-align:center;box-shadow:var(--shadow-sm);transition:transform 0.2s;}
+.stat-card:hover{transform:translateY(-2px);}.stat-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:var(--green);}
+.stat-label{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.09em;margin-top:4px;font-weight:500;}
+.section-header{display:flex;align-items:center;gap:16px;margin-bottom:2rem;}
+.section-label{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;font-style:italic;white-space:nowrap;}
+.section-line{flex:1;height:1px;background:var(--border-soft);}
+.gurudev-card{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-soft);box-shadow:var(--shadow-md);margin-bottom:3.5rem;}
+.gurudev-top{display:grid;grid-template-columns:240px 1fr;}
+.gurudev-photo-side{background:linear-gradient(160deg,#c8f0e0 0%,var(--green-mid) 50%,var(--green-border) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:2.5rem 1.5rem;}
+.gurudev-img-wrap{width:150px;height:190px;border-radius:16px;overflow:hidden;box-shadow:0 10px 36px rgba(0,0,0,0.22);border:3px solid rgba(255,255,255,0.6);background:rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;}
+.gurudev-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+.gurudev-img-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:100%;height:100%;}
+.gurudev-img-placeholder .ph-icon{font-size:36px;}.gurudev-img-placeholder .ph-label{font-size:9px;color:var(--green-deeper);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-align:center;line-height:1.4;padding:0 10px;}
+.gurudev-body{padding:2.2rem 2.4rem;background:var(--bg);display:flex;flex-direction:column;justify-content:center;gap:16px;}
+.eyebrow{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green);font-weight:600;}
+.gurudev-body h2{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;line-height:1.1;}
+.gurudev-body h2 em{font-style:italic;color:var(--green);}.gurudev-body p{font-size:14px;color:var(--text-muted);line-height:1.85;font-weight:300;}
+.g-tags{display:flex;flex-wrap:wrap;gap:8px;}.g-tag{font-size:11px;background:var(--bg-soft);border:1px solid var(--border-soft);border-radius:20px;padding:4px 13px;color:var(--text-muted);}
+.gurudev-footer{background:var(--bg-soft);padding:1.2rem 2.4rem;border-top:1px solid var(--border-soft);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.gurudev-quote{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--text-muted);line-height:1.6;max-width:580px;}
+.gurudev-quote span{color:var(--green);font-weight:500;}.quote-attr{font-size:11px;color:var(--text-faint);white-space:nowrap;}
+.about-card{display:grid;grid-template-columns:220px 1fr;border:1px solid var(--border-soft);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);}
+.about-photo-side{background:linear-gradient(180deg,var(--green-light) 0%,#d4f0e5 100%);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:12px;padding:2rem 1rem;border-right:1px solid var(--border-soft);}
+.ashish-img-wrap{width:120px;height:120px;border-radius:50%;overflow:hidden;border:4px solid var(--green-border);box-shadow:0 6px 24px rgba(29,158,117,0.22);background:var(--green-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ashish-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.ashish-img-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:100%;height:100%;}
+.ashish-title-block{font-size:11px;color:var(--green-deeper);font-weight:500;text-align:center;line-height:1.7;font-family:'Cormorant Garamond',serif;}
+.ashish-title-block strong{font-size:15px;display:block;margin-bottom:5px;font-weight:700;color:var(--green-deeper);}
+.about-body{padding:2.4rem;background:var(--bg);display:flex;flex-direction:column;gap:13px;justify-content:center;}
+.about-body h3{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;}.about-role-txt{font-size:14px;color:var(--text-muted);font-style:italic;font-weight:300;}
+.about-body p{font-size:13.5px;color:var(--text-muted);line-height:1.85;font-weight:300;}
+.cert-tags{display:flex;flex-wrap:wrap;gap:8px;}.cert-tag{font-size:11px;background:var(--green-light);color:var(--green-dark);border-radius:20px;padding:5px 13px;font-weight:500;border:1px solid var(--green-border);}
+.special-banner{border-radius:12px;padding:1.1rem 1.6rem;margin-bottom:1rem;display:flex;align-items:flex-start;gap:14px;}
+.banner-anand{background:#E4F8EF;border:1.5px solid var(--green-border);}.banner-sahaj{background:var(--purple-light);border:1.5px solid var(--purple-border);}
+.banner-icon{font-size:20px;flex-shrink:0;margin-top:1px;}.banner-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;margin-bottom:4px;}
+.banner-title.green{color:var(--green-deeper);}.banner-title.purple{color:var(--purple-dark);}
+.banner-desc{font-size:12.5px;line-height:1.7;font-weight:300;}.banner-desc.green{color:var(--green-dark);}.banner-desc.purple{color:var(--purple);}
+.timeline{display:flex;overflow-x:auto;padding:1rem 0 1.5rem;gap:0;margin-bottom:2.5rem;}
+.tl-item{display:flex;flex-direction:column;align-items:center;min-width:130px;position:relative;flex:1;}
+.tl-item:not(:last-child)::after{content:'';position:absolute;top:14px;left:60%;width:80%;height:1.5px;background:var(--border-soft);z-index:0;}
+.tl-dot{width:30px;height:30px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600;z-index:1;flex-shrink:0;margin-bottom:10px;box-shadow:var(--shadow-green);}
+.tl-dot.purple{background:var(--purple);}.tl-date{font-size:11px;font-weight:600;text-align:center;}.tl-name{font-size:10px;color:var(--text-muted);text-align:center;margin-top:3px;line-height:1.4;max-width:105px;}
+.filter-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.8rem;}
+.filter-tag{font-size:12px;padding:7px 18px;border-radius:20px;border:1.5px solid var(--border);background:transparent;color:var(--text-muted);cursor:pointer;font-family:'Jost',sans-serif;transition:all 0.18s;letter-spacing:0.04em;font-weight:400;}
+.filter-tag.active,.filter-tag:hover{background:var(--green-light);color:var(--green-dark);border-color:var(--green-border);font-weight:500;}
+.courses-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;}
+.course-card{background:var(--bg);border:1px solid var(--border-soft);border-radius:var(--radius-lg);padding:1.7rem;display:flex;flex-direction:column;gap:13px;transition:all 0.25s;box-shadow:var(--shadow-sm);}
+.course-card:hover{border-color:var(--green-border);transform:translateY(-3px);box-shadow:var(--shadow-md);}
+.course-card.highlight-green{border:2px solid var(--green-border);}.course-card.highlight-purple{border:2px solid var(--purple-border);}
+.course-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;padding:5px 12px;border-radius:20px;width:fit-content;}
+.badge-online{background:var(--green-light);color:var(--green-dark);border:1px solid var(--green-border);}
+.badge-offline{background:var(--purple-light);color:var(--purple-dark);border:1px solid var(--purple-border);}
+.badge-special-g{background:var(--green-light);color:var(--green-deeper);border:1.5px solid var(--green-border);}
+.badge-special-s{background:var(--purple-light);color:var(--purple-dark);border:1.5px solid var(--purple-border);}
+.badge-children{background:#FAEEDА;color:#854F0B;border:1px solid #e5c98a;}
+.badge-wellness{background:var(--rose-light);color:var(--rose-text);border:1px solid #e8b5a5;}
+.course-icon{font-size:22px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;background:var(--bg-soft);border-radius:12px;border:1px solid var(--border-soft);}
+.course-title{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;line-height:1.3;}
+.info-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+.info-table tr td{padding:6px 0;vertical-align:top;border-bottom:1px solid var(--border-soft);}
+.info-table tr:last-child td{border-bottom:none;}
+.info-table tr td:first-child{color:var(--text-faint);width:78px;padding-right:8px;font-weight:500;}
+.info-table tr td:last-child{font-weight:500;color:var(--text);}
+.mode-pill{display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500;}
+.mode-online{background:var(--green-light);color:var(--green-dark);}.mode-offline{background:var(--purple-light);color:var(--purple-dark);}
+.teacher-chips{display:flex;flex-wrap:wrap;gap:6px;}.teacher-chip{font-size:11px;background:var(--bg-soft);border:1px solid var(--border-soft);border-radius:20px;padding:3px 11px;color:var(--text-muted);}
+.reg-btn-full{background:var(--green);color:#fff;border:none;border-radius:9px;padding:11px 0;font-size:13px;font-weight:600;letter-spacing:0.05em;font-family:'Jost',sans-serif;cursor:pointer;text-decoration:none;transition:all 0.2s;display:block;text-align:center;width:100%;margin-top:6px;box-shadow:var(--shadow-green);}
+.reg-btn-full:hover{background:var(--green-dark);transform:translateY(-1px);}
+.reg-btn-full.purple{background:var(--purple);}.reg-btn-full.purple:hover{background:var(--purple-dark);}
+.reg-btn-full.nadi{background:linear-gradient(135deg,#C4622D,#8B4513);}.reg-btn-full.nadi:hover{background:linear-gradient(135deg,#A0521F,#6B3410);}
+.seats-note{font-size:11px;color:var(--text-faint);text-align:center;font-weight:300;margin-top:2px;}
+.activities-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;}
+.activity-card{background:var(--bg);border-radius:var(--radius);padding:1.5rem;display:flex;flex-direction:column;gap:10px;border:1px solid var(--border-soft);box-shadow:var(--shadow-sm);transition:transform 0.2s;}
+.activity-card:hover{transform:translateY(-2px);}
+.activity-icon{font-size:20px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--green-light);border-radius:10px;border:1px solid var(--green-border);}
+.activity-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;}.activity-when{font-size:12px;color:var(--text-muted);font-weight:300;}.activity-spots{font-size:11px;color:var(--green);font-weight:600;}
+.quote-strip{background:linear-gradient(135deg,var(--green-light) 0%,#d0f0e4 100%);border-left:4px solid var(--green);border-radius:0 var(--radius) var(--radius) 0;padding:1.8rem 2.2rem;margin:0 0 4.5rem;font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--green-deeper);line-height:1.7;box-shadow:var(--shadow-sm);}
+.knowledge-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.article-card{background:var(--bg);border:1px solid var(--border-soft);border-radius:var(--radius);padding:1.5rem 1.7rem;transition:all 0.2s;box-shadow:var(--shadow-sm);}
+.article-card:hover{border-color:var(--green-border);transform:translateY(-2px);box-shadow:var(--shadow-md);}
+.article-cat{font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;}
+.cat-insight{color:var(--green-dark);}.cat-practice{color:var(--purple);}.cat-science{color:#854F0B;}.cat-guide{color:#993556;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;line-height:1.35;margin-bottom:9px;}
+.article-excerpt{font-size:13px;color:var(--text-muted);line-height:1.7;font-weight:300;}
+.article-read{font-size:11px;color:var(--green);font-weight:600;margin-top:12px;display:block;letter-spacing:0.06em;}
+.feat-article{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.2fr;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-soft);box-shadow:var(--shadow-md);}
+.feat-visual{background:linear-gradient(160deg,var(--green-light) 0%,var(--green-mid) 55%,var(--green-border) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:2.5rem;min-height:170px;}
+.feat-visual-symbol{font-size:48px;}.feat-visual-caption{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--green-deeper);font-style:italic;}
+.feat-article-body{padding:2rem;background:var(--bg);}
+.sub-section-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;font-style:italic;color:var(--text-muted);margin-bottom:1.2rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-soft);}
+.add-cta{background:linear-gradient(135deg,var(--green-light) 0%,#d8f4eb 100%);border:1.5px dashed var(--green-border);border-radius:var(--radius-lg);padding:2.5rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;}
+.add-cta h4{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--green-deeper);}
+.add-cta p{font-size:13.5px;color:var(--green-dark);font-weight:300;max-width:400px;line-height:1.7;}
+.happiness-survey-card{display:grid;grid-template-columns:160px 1fr;border-radius:var(--radius-lg);overflow:hidden;border:2px solid var(--green-border);box-shadow:var(--shadow-md);background:var(--bg);}
+.survey-left{background:linear-gradient(160deg,#c8f0e0 0%,var(--green-mid) 55%,var(--green-border) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:2rem 1rem;}
+.survey-emoji{font-size:52px;}.survey-badge{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--green-deeper);background:rgba(255,255,255,0.55);border-radius:20px;padding:4px 12px;text-align:center;line-height:1.4;}
+.survey-body{padding:2.2rem 2.4rem;display:flex;flex-direction:column;gap:14px;justify-content:center;}
+.survey-title{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--text);line-height:1.15;}
+.survey-desc{font-size:14px;color:var(--text-muted);line-height:1.8;font-weight:300;max-width:520px;}
+.survey-btn{display:inline-block;width:fit-content;background:var(--green);color:#fff;border-radius:10px;padding:13px 30px;font-size:14px;font-weight:600;font-family:'Jost',sans-serif;letter-spacing:0.05em;transition:all 0.2s;box-shadow:var(--shadow-green);text-decoration:none;margin-top:4px;}
+.survey-btn:hover{background:var(--green-dark);transform:translateY(-2px);}
+.newsletter{background:linear-gradient(135deg,#f0faf6 0%,#e6f7f1 100%);border:1px solid var(--green-border);border-radius:var(--radius-lg);padding:3rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;box-shadow:var(--shadow-sm);}
+.newsletter h3{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;color:var(--green-deeper);}
+.newsletter p{font-size:14px;color:var(--green-dark);line-height:1.8;max-width:420px;font-weight:300;}
+.nl-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;width:100%;max-width:460px;}
+.nl-input{flex:1;min-width:200px;padding:12px 16px;border:1.5px solid var(--green-border);border-radius:9px;font-size:14px;background:var(--bg);color:var(--text);font-family:'Jost',sans-serif;outline:none;transition:border-color 0.2s;}
+.nl-input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(29,158,117,0.1);}
+.contact-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:0.5rem;}
+.contact-chip{font-size:12px;padding:7px 18px;border-radius:20px;border:1px solid var(--green-border);color:var(--green-dark);background:rgba(255,255,255,0.7);font-weight:400;}
+.note-strip{background:#fffbf0;border:1px solid #e5c98a;border-radius:10px;padding:1rem 1.5rem;margin-top:2rem;display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#854F0B;line-height:1.7;}
+.note-strip strong{color:#6b3a00;}
+footer{background:var(--green-deeper);color:rgba(255,255,255,0.75);padding:2.5rem 1.5rem;text-align:center;margin-top:5rem;}
+footer p{font-size:12px;line-height:2;font-weight:300;}footer strong{color:rgba(255,255,255,0.95);font-weight:600;}
+footer .footer-lotus{font-size:24px;margin-bottom:0.5rem;display:block;}
+.updation-notice{display:flex;align-items:flex-start;gap:16px;background:linear-gradient(135deg,#fffbf0 0%,#fff8e6 100%);border:1.5px dashed #EF9F27;border-radius:var(--radius-lg);padding:1.6rem 2rem;margin-bottom:2rem;}
+.updation-icon{font-size:28px;flex-shrink:0;animation:spin 3s linear infinite;}
+@keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+.updation-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#854F0B;margin-bottom:5px;}
+.updation-desc{font-size:13.5px;color:#7a5010;font-weight:300;line-height:1.7;}
+.under-updation-btn{background:linear-gradient(135deg,#fffbf0,#fff3d4);color:#854F0B;border:1.5px dashed #EF9F27;border-radius:9px;padding:11px 0;font-size:12px;font-weight:600;letter-spacing:0.05em;font-family:'Jost',sans-serif;text-align:center;width:100%;margin-top:6px;display:block;}
+#scrollTop{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;border:none;font-size:18px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:var(--shadow-green);z-index:999;transition:all 0.2s;font-family:'Jost',sans-serif;}
+#scrollTop:hover{background:var(--green-dark);transform:translateY(-2px);}#scrollTop.visible{display:flex;}
+/* Nadi Pariksha */
+.nadi-hero-band{background:linear-gradient(135deg,#FFF3E8,#FFE8D0);border:2px solid #D4854A;border-radius:var(--radius-lg);padding:1.8rem 2rem;margin-bottom:2rem;display:flex;align-items:flex-start;gap:18px;box-shadow:0 4px 20px rgba(196,98,45,0.12);}
+.nadi-hero-icon{font-size:36px;flex-shrink:0;}
+.nadi-hero-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#6B2F00;margin-bottom:6px;}
+.nadi-hero-sub{font-size:13.5px;color:#8B4513;line-height:1.75;font-weight:300;}
+.nadi-info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:2rem;}
+.nadi-info-tile{background:#fff;border:1px solid #D4854A;border-radius:12px;padding:1rem 1.2rem;display:flex;align-items:flex-start;gap:12px;}
+.nadi-tile-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+.nadi-tile-label{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#A0522D;margin-bottom:3px;}
+.nadi-tile-val{font-size:13px;font-weight:600;color:#4A2000;line-height:1.4;}
+.nadi-alert{background:#FFF8E1;border:1.5px solid #F9A825;border-radius:10px;padding:0.9rem 1.2rem;margin-bottom:2rem;display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#5D4037;line-height:1.7;}
+.nadi-alert strong{color:#3E2723;}
+.nadi-form-wrap{background:#fff;border:1.5px solid #D4854A;border-radius:var(--radius-lg);padding:2rem 2.2rem;}
+.nadi-form-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#6B2F00;margin-bottom:0.3rem;}
+.nadi-form-sub{font-size:13px;color:#8B4513;margin-bottom:1.6rem;line-height:1.6;}
+.nadi-field{margin-bottom:1.2rem;}
+.nadi-label{display:block;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6B2F00;margin-bottom:6px;}
+.nadi-label .req{color:#C0392B;}
+.nadi-input,.nadi-select{width:100%;padding:11px 14px;border:1.5px solid #D4854A;border-radius:9px;font-size:14px;font-family:'Jost',sans-serif;color:var(--text);background:#fff;outline:none;transition:border-color 0.2s;}
+.nadi-input:focus,.nadi-select:focus{border-color:#C4622D;box-shadow:0 0 0 3px rgba(196,98,45,0.12);}
+.nadi-radio-group{display:flex;gap:10px;flex-wrap:wrap;}
+.nadi-radio-label{display:flex;align-items:center;gap:7px;padding:9px 16px;border:1.5px solid #D4854A;border-radius:20px;cursor:pointer;font-size:13px;font-weight:500;color:#6B2F00;transition:all 0.18s;user-select:none;}
+.nadi-radio-label:hover,.nadi-radio-label.selected{background:#FFF3E8;border-color:#C4622D;}
+.nadi-radio-label input[type=radio]{accent-color:#C4622D;}
+.nadi-two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.nadi-submit-btn{background:linear-gradient(135deg,#C4622D,#8B4513);color:#fff;border:none;border-radius:10px;padding:14px 0;font-size:14px;font-weight:600;font-family:'Jost',sans-serif;cursor:pointer;width:100%;letter-spacing:0.06em;transition:all 0.2s;box-shadow:0 4px 16px rgba(196,98,45,0.30);margin-top:0.5rem;}
+.nadi-submit-btn:hover{background:linear-gradient(135deg,#A0521F,#6B3410);transform:translateY(-1px);}
+.nadi-submit-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+.nadi-success-msg{display:none;background:#E8F5E9;border:1.5px solid #4CAF50;border-radius:10px;padding:1.2rem 1.5rem;margin-top:1rem;font-size:14px;color:#2E7D32;line-height:1.7;text-align:center;}
+.nadi-success-msg.show{display:block;}
+.nadi-error-msg{display:none;background:#FFEBEE;border:1.5px solid #F44336;border-radius:10px;padding:1rem 1.5rem;margin-top:1rem;font-size:13px;color:#C62828;line-height:1.7;}
+.nadi-error-msg.show{display:block;}
+.nadi-share-cta{background:linear-gradient(135deg,#FFF3E8,#FFE8D0);border:1.5px dashed #D4854A;border-radius:var(--radius-lg);padding:1.5rem 2rem;margin-top:1.5rem;text-align:center;}
+.nadi-share-cta p{font-size:13px;color:#8B4513;margin-bottom:10px;}
+.nadi-share-link{display:inline-block;background:linear-gradient(135deg,#C4622D,#8B4513);color:#fff;border-radius:8px;padding:10px 24px;font-size:13px;font-weight:600;font-family:'Jost',sans-serif;cursor:pointer;border:none;transition:all 0.2s;}
+/* Celebrations */
+.celeb-section-wrap{background:linear-gradient(135deg,#fff8fc,#fff0fb);border:2px solid #F48FB1;border-radius:var(--radius-lg);padding:2rem;margin-bottom:2rem;}
+.celeb-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:2rem;}
+.celeb-tab{padding:10px 20px;border-radius:20px;border:1.5px solid #F48FB1;background:transparent;color:#880045;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s;}
+.celeb-tab.active{background:#E91E8C;color:#fff;border-color:#E91E8C;box-shadow:0 4px 14px rgba(233,30,140,0.28);}
+.celeb-panel{display:none;}.celeb-panel.active{display:block;}
+.today-celeb-banner{background:linear-gradient(135deg,#FCE4EC,#F8BBD9);border:2px solid #E91E8C;border-radius:14px;padding:1.5rem 1.8rem;margin-bottom:1.5rem;text-align:center;}
+.today-celeb-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#880045;margin-bottom:1rem;}
+.celeb-cards-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+.celeb-member-card{background:#fff;border:1.5px solid #F48FB1;border-radius:12px;padding:1rem 1.4rem;min-width:180px;text-align:center;}
+.celeb-member-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#880045;}
+.celeb-member-type{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#E91E8C;margin-top:3px;}
+.celeb-member-age{font-size:12px;color:#888;margin-top:4px;}
+.celeb-wish-btn{margin-top:10px;background:#E91E8C;color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:12px;font-weight:600;font-family:'Jost',sans-serif;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block;}
+.celeb-wish-btn:hover{background:#C2185B;}
+.no-celeb-msg{font-size:14px;color:#C2185B;font-style:italic;text-align:center;padding:1rem;}
+.member-list-wrap{overflow-x:auto;}
+.member-table{width:100%;border-collapse:collapse;font-size:13px;}
+.member-table th{background:#FCE4EC;color:#880045;font-weight:600;padding:10px 12px;text-align:left;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;}
+.member-table td{padding:9px 12px;border-bottom:1px solid #fce4ec;vertical-align:middle;}
+.member-table tr:hover td{background:#fff8fc;}
+.member-table .wish-cell a{color:#E91E8C;font-weight:600;font-size:12px;}
+.badge-bday{background:#FCE4EC;color:#C2185B;border:1px solid #F48FB1;border-radius:20px;font-size:10px;font-weight:600;padding:2px 9px;}
+.badge-anniv{background:#E8F5E9;color:#2E7D32;border:1px solid #A5D6A7;border-radius:20px;font-size:10px;font-weight:600;padding:2px 9px;}
+.celeb-form-wrap{background:#fff;border:1.5px solid #F48FB1;border-radius:14px;padding:1.8rem 2rem;}
+.celeb-form-title{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:#880045;margin-bottom:0.3rem;}
+.celeb-form-sub{font-size:13px;color:#C2185B;margin-bottom:1.5rem;line-height:1.6;}
+.celeb-field{margin-bottom:1.1rem;}
+.celeb-label{display:block;font-size:11px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:#880045;margin-bottom:5px;}
+.celeb-label .req{color:#C0392B;}
+.celeb-input,.celeb-select{width:100%;padding:10px 13px;border:1.5px solid #F48FB1;border-radius:9px;font-size:14px;font-family:'Jost',sans-serif;color:var(--text);background:#fff;outline:none;transition:border-color 0.2s;}
+.celeb-input:focus,.celeb-select:focus{border-color:#E91E8C;box-shadow:0 0 0 3px rgba(233,30,140,0.10);}
+.celeb-two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.celeb-three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.celeb-submit-btn{background:linear-gradient(135deg,#E91E8C,#C2185B);color:#fff;border:none;border-radius:10px;padding:13px 0;font-size:14px;font-weight:600;font-family:'Jost',sans-serif;cursor:pointer;width:100%;letter-spacing:0.06em;transition:all 0.2s;box-shadow:0 4px 16px rgba(233,30,140,0.28);margin-top:0.5rem;}
+.celeb-submit-btn:hover{background:linear-gradient(135deg,#C2185B,#880045);transform:translateY(-1px);}
+.celeb-submit-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+.celeb-success{display:none;background:#E8F5E9;border:1.5px solid #4CAF50;border-radius:10px;padding:1.1rem 1.4rem;margin-top:1rem;font-size:14px;color:#2E7D32;text-align:center;}
+.celeb-success.show{display:block;}
+.celeb-error{display:none;background:#FFEBEE;border:1.5px solid #F44336;border-radius:10px;padding:1rem 1.4rem;margin-top:1rem;font-size:13px;color:#C62828;}
+.celeb-error.show{display:block;}
+.celeb-share-box{background:linear-gradient(135deg,#FCE4EC,#F8BBD9);border:1.5px dashed #E91E8C;border-radius:14px;padding:1.4rem 1.8rem;margin-top:1.5rem;text-align:center;}
+.celeb-share-box p{font-size:13px;color:#880045;margin-bottom:10px;}
+.celeb-share-btn{background:linear-gradient(135deg,#E91E8C,#C2185B);color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:13px;font-weight:600;font-family:'Jost',sans-serif;cursor:pointer;margin:4px;}
+.wa-share-btn{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:13px;font-weight:600;font-family:'Jost',sans-serif;cursor:pointer;margin:4px;}
+.celeb-loading{text-align:center;padding:1.5rem;font-size:14px;color:#E91E8C;font-style:italic;}
+@media(max-width:720px){.gurudev-top,.about-card,.feat-article,.happiness-survey-card{grid-template-columns:1fr;}.about-photo-side{border-right:none;border-bottom:1px solid var(--border-soft);}.knowledge-grid{grid-template-columns:1fr;}.nav-links{display:none;}.survey-left{min-height:140px;}.nadi-two-col,.celeb-two-col,.celeb-three-col{grid-template-columns:1fr;}}
+@media(max-width:500px){.stats{grid-template-columns:1fr 1fr;}nav{padding:0.7rem 1rem;}.hero{padding:3.5rem 0 2.5rem;}.wrap{padding:0 1rem;}.newsletter{padding:2rem 1.2rem;}.nadi-info-grid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+<nav>
+  <div class="nav-left">
+    <div class="nav-logo-box"><img src="aol-logo.jpg" alt="Art of Living" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/><span class="nav-logo-emoji" style="display:none">🏵️</span></div>
+    <div><div class="nav-name">Ashish Kumar</div><div class="nav-role">Art of Living Faculty</div></div>
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a><a href="#programs">Programs</a><a href="#may2026">May 2026</a>
+    <a href="#nadi-pariksha">Nadi Pariksha</a><a href="#celebrations">🎂 Celebrations</a>
+    <a href="#knowledge">Knowledge</a><a href="#survey">Survey</a><a href="#connect">Connect</a>
+  </div>
+  <a class="nav-cta" href="#celebrations">🎂 Celebrations</a>
+</nav>
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-eyebrow">🪷 Art of Living · Bhiwadi</div>
+    <h1>Nurture your mind,<br><em>heal from within.</em></h1>
+    <p class="hero-sub">Evidence-based courses and guided practices by Ashish Kumar Ji — helping individuals and families build lasting mental wellness, inner clarity, and deep joy.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#may2026">View May 2026 Programs</a>
+      <a class="btn-outline" href="#celebrations">🎂 Celebrations</a>
+    </div>
+    <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+  </div>
+  <div class="stats">
+    <div class="stat-card"><div class="stat-num">1000+</div><div class="stat-label">Lives Touched</div></div>
+    <div class="stat-card"><div class="stat-num">6</div><div class="stat-label">Certified Programs</div></div>
+    <div class="stat-card"><div class="stat-num">All Ages</div><div class="stat-label">5 Years &amp; Above</div></div>
+  </div>
+  <section id="gurudev">
+    <div class="section-header"><div class="section-label">Our Beloved Gurudev</div><div class="section-line"></div></div>
+    <div class="gurudev-card">
+      <div class="gurudev-top">
+        <div class="gurudev-photo-side">
+          <div class="gurudev-img-wrap"><img src="gurudev.jpg" alt="Sri Sri Ravi Shankar Ji" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="gurudev-img-placeholder" style="display:none"><div class="ph-icon">🙏</div><div class="ph-label">Gurudev Photo</div></div></div>
+          <div style="background:rgba(255,255,255,0.65);padding:8px 12px;border-radius:10px;text-align:center;font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:600;color:#085041;line-height:1.6;">H.H. Gurudev<br>Sri Sri Ravi Shankar Ji</div>
+        </div>
+        <div class="gurudev-body">
+          <div class="eyebrow">Founder — Art of Living Foundation</div>
+          <h2>Sri Sri<br><em>Ravi Shankar Ji</em></h2>
+          <p>Sri Sri Ravi Shankar Ji is a globally revered humanitarian, spiritual leader, and founder of the Art of Living Foundation — one of the world's largest volunteer-based organizations, active in over 180 countries. His teachings on breath, meditation, and human values have brought peace and joy to over 500 million people worldwide.</p>
+          <div class="g-tags"><span class="g-tag">🌍 180+ Countries</span><span class="g-tag">🕊️ UN Peace Ambassador</span><span class="g-tag">🪷 Founded AoL 1981</span><span class="g-tag">💛 500M+ Lives Touched</span></div>
+        </div>
+      </div>
+      <div class="gurudev-footer">
+        <div class="gurudev-quote">"<span>Breath is the link between the inner and outer world.</span> Master your breath and you master your life."</div>
+        <span class="quote-attr">— Sri Sri Ravi Shankar Ji</span>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="section-header"><div class="section-label">About Ashish Ji</div><div class="section-line"></div></div>
+    <div class="about-card">
+      <div class="about-photo-side">
+        <div class="ashish-img-wrap"><img src="ashish.jpg" alt="Ashish Kumar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="ashish-img-placeholder" style="display:none"><div class="ph-icon">🧘</div><div class="ph-label">Photo Here</div></div></div>
+        <div class="ashish-title-block"><strong>Ashish Kumar</strong>Art of Living Faculty<br>Part Time Teacher<br>Happiness Program<br>Sahaj Samadhi Dhyan<br>Sri Sri Sanskar Kendra<br>KYC &amp; KYT<br>Swastha Shibir Pracharak</div>
+      </div>
+      <div class="about-body">
+        <div class="eyebrow">Art of Living Faculty · Bhiwadi</div>
+        <h3>Ashish Kumar</h3>
+        <div class="about-role-txt">Teacher of Breath, Meditation &amp; Inner Wellbeing</div>
+        <p>Ashish Ji has been guiding people through the transformative programs of the Art of Living Foundation for several years. With deep knowledge of Sudarshan Kriya, Sahaj Samadhi Meditation, and yogic practices, he brings warmth, clarity, and genuine care to every session.</p>
+        <div class="cert-tags"><span class="cert-tag">✅ Certified AoL Faculty</span><span class="cert-tag">🫁 Sudarshan Kriya</span><span class="cert-tag">🧘 Sahaj Samadhi</span><span class="cert-tag">🌿 Swasthya Shibir</span><span class="cert-tag">🎶 SSSK Children's Program</span></div>
+      </div>
+    </div>
+  </section>
+  <section id="programs">
+    <div class="section-header"><div class="section-label">All Programs &amp; Courses</div><div class="section-line"></div></div>
+    <div class="filter-row">
+      <button class="filter-tag active" onclick="filterCards('all',this)">All Programs</button>
+      <button class="filter-tag" onclick="filterCards('online',this)">🌐 Online</button>
+      <button class="filter-tag" onclick="filterCards('offline',this)">📍 In-Person</button>
+      <button class="filter-tag" onclick="filterCards('meditation',this)">🧘 Meditation</button>
+      <button class="filter-tag" onclick="filterCards('children',this)">🌟 For Children</button>
+      <button class="filter-tag" onclick="filterCards('wellness',this)">🌿 Wellness</button>
+    </div>
+    <div class="courses-grid" id="all-courses">
+      <div class="course-card highlight-green" data-tags="online meditation"><span class="course-badge badge-online">🌐 Online · Live</span><div class="course-icon">🫁</div><div class="course-title">Online Breath &amp; Meditation Workshop</div><table class="info-table"><tr><td>Duration</td><td>4 Days · 2 Hrs/session</td></tr><tr><td>Mode</td><td><span class="mode-pill mode-online">🌐 Online</span></td></tr><tr><td>Age</td><td>18 years &amp; above</td></tr></table><a class="reg-btn-full" href="https://aolt.in/989167" target="_blank">Register Now →</a></div>
+      <div class="course-card" data-tags="offline wellness"><span class="course-badge badge-wellness">✦ Flagship Program</span><div class="course-icon">😊</div><div class="course-title">Happiness Program</div><table class="info-table"><tr><td>Duration</td><td>3 Days · 2.5 Hrs/session</td></tr><tr><td>Mode</td><td><span class="mode-pill mode-offline">📍 In-Person</span></td></tr><tr><td>Age</td><td>18 years &amp; above</td></tr></table><a class="reg-btn-full" href="https://aolt.in/1011434" target="_blank">Register Now →</a></div>
+      <div class="course-card" data-tags="offline meditation"><span class="course-badge badge-offline">📍 In-Person</span><div class="course-icon">🧘</div><div class="course-title">Sahaj Samadhi Dhyan Yoga</div><table class="info-table"><tr><td>Duration</td><td>3 Days · 2 Hrs/session</td></tr><tr><td>Mode</td><td><span class="mode-pill mode-offline">📍 In-Person</span></td></tr><tr><td>Age</td><td>16 years &amp; above</td></tr></table><a class="reg-btn-full" href="https://aolt.in/992966" target="_blank">Register Now →</a></div>
+      <div class="course-card" data-tags="online meditation"><span class="course-badge badge-online">🌐 Online · Live</span><div class="course-icon">🪷</div><div class="course-title">Online Sahaj Samadhi Dhyan Yoga</div><table class="info-table"><tr><td>Duration</td><td>2 Days · 2 Hrs/session</td></tr><tr><td>Mode</td><td><span class="mode-pill mode-online">🌐 Online</span></td></tr><tr><td>Age</td><td>16 years &amp; above</td></tr></table><a class="reg-btn-full" href="https://aolt.in/1001807" target="_blank">Register Now →</a></div>
+      <div class="course-card" data-tags="children offline"><span class="course-badge badge-children">🌟 For Children</span><div class="course-icon">🎶</div><div class="course-title">Sri Sri Sanskar Kendra (SSSK)</div><table class="info-table"><tr><td>Duration</td><td>5 Days · 1.5 Hrs/session</td></tr><tr><td>Mode</td><td><span class="mode-pill mode-offline">📍 In-Person</span></td></tr><tr><td>Age</td><td>5 to 11 years</td></tr></table><div class="under-updation-btn">🔄 Registration — Under Updation</div></div>
+      <div class="course-card" data-tags="offline wellness"><span class="course-badge badge-wellness">🌿 Wellness</span><div class="course-icon">💊</div><div class="course-title">Swasthya Shibir Program</div><table class="info-table"><tr><td>Duration</td><td>3 Days · 2 Hrs/session</td></tr><tr><td>Mode</td><td><span class="mode-pill mode-offline">📍 In-Person</span></td></tr><tr><td>Age</td><td>16 years &amp; above</td></tr></table><div class="under-updation-btn">🔄 Registration — Under Updation</div></div>
+    </div>
+  </section>
+  <section id="may2026">
+    <div class="section-header"><div class="section-label">May 2026 Schedule</div><div class="section-line"></div></div>
+    <div class="special-banner banner-anand"><div class="banner-icon">✨</div><div><div class="banner-title green">Anand Utsav — Live Session with Gurudev</div><div class="banner-desc green">The Happiness Program (8–10 May) is a special Anand Utsav batch featuring a live session with Sri Sri Ravi Shankar Ji.</div></div></div>
+    <div class="special-banner banner-sahaj"><div class="banner-icon">🌸</div><div><div class="banner-title purple">Global Sahaj Samadhi Meditation Program</div><div class="banner-desc purple">Both Sahaj Samadhi programs (22–24 May) are part of the Global Program with <strong>Bhanumathi Narasimhan</strong> — Facilitated by Ashish Ji.</div></div></div>
+    <div class="section-header" style="margin-top:2rem"><div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;font-style:italic;color:var(--text-muted)">Month at a Glance</div><div class="section-line"></div></div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot">8</div><div class="tl-date">May 8–10</div><div class="tl-name">Happiness Program</div></div>
+      <div class="tl-item"><div class="tl-dot">9</div><div class="tl-date">May 9–12</div><div class="tl-name">Breath &amp; Meditation Online</div></div>
+      <div class="tl-item"><div class="tl-dot" style="background:#C4622D;">24</div><div class="tl-date">May 24</div><div class="tl-name">Nadi Pariksha Camp</div></div>
+      <div class="tl-item"><div class="tl-dot purple">22</div><div class="tl-date">May 22–24</div><div class="tl-name">Sahaj Samadhi Offline</div></div>
+      <div class="tl-item"><div class="tl-dot purple">22</div><div class="tl-date">May 22–24</div><div class="tl-name">Sahaj Samadhi Online</div></div>
+    </div>
+    <div class="courses-grid">
+      <div class="course-card highlight-green"><span class="course-badge badge-special-g">✨ Anand Utsav</span><div class="course-icon">😊</div><div class="course-title">Happiness Program</div><table class="info-table"><tr><td>Dates</td><td>8–10 May 2026</td></tr><tr><td>Mode</td><td><span class="mode-pill mode-offline">📍 Offline</span></td></tr><tr><td>Location</td><td>Bhiwadi</td></tr><tr><td>Age</td><td>18+</td></tr></table><a class="reg-btn-full" href="https://aolt.in/1011434" target="_blank">Register Now →</a></div>
+      <div class="course-card"><span class="course-badge badge-online">🌐 Online</span><div class="course-icon">🫁</div><div class="course-title">Breath &amp; Meditation Workshop</div><table class="info-table"><tr><td>Dates</td><td>9–12 May 2026</td></tr><tr><td>Mode</td><td><span class="mode-pill mode-online">🌐 Online</span></td></tr><tr><td>Location</td><td>Bhiwadi (Online)</td></tr><tr><td>Age</td><td>18+</td></tr></table><a class="reg-btn-full" href="https://aolt.in/989167" target="_blank">Register Now →</a></div>
+      <div class="course-card highlight-purple"><span class="course-badge badge-special-s">🌸 Global Program</span><div class="course-icon">🧘</div><div class="course-title">Sahaj Samadhi Dhyan Yoga</div><table class="info-table"><tr><td>Dates</td><td>22–24 May 2026</td></tr><tr><td>Mode</td><td><span class="mode-pill mode-offline">📍 Offline</span></td></tr><tr><td>Location</td><td>Bhiwadi</td></tr><tr><td>Age</td><td>16+</td></tr></table><a class="reg-btn-full purple" href="https://aolt.in/992966" target="_blank">Register Now →</a></div>
+      <div class="course-card highlight-purple"><span class="course-badge badge-special-s">🌸 Global Program</span><div class="course-icon">🪷</div><div class="course-title">Online Sahaj Samadhi Dhyan Yoga</div><table class="info-table"><tr><td>Dates</td><td>22–24 May 2026</td></tr><tr><td>Mode</td><td><span class="mode-pill mode-online">🌐 Online</span></td></tr><tr><td>Location</td><td>Bhiwadi (Online)</td></tr><tr><td>Age</td><td>16+</td></tr></table><a class="reg-btn-full purple" href="https://aolt.in/1001807" target="_blank">Register Now →</a></div>
+    </div>
+    <div class="note-strip"><span>🔔</span><span><strong>Note:</strong> All programs are under the Art of Living Foundation. Early registration recommended — seats fill quickly.</span></div>
+  </section>
+  <section id="nadi-pariksha">
+    <div class="section-header"><div class="section-label">Nadi Pariksha Camp — 24th May 2026</div><div class="section-line"></div></div>
+    <div class="nadi-hero-band"><div class="nadi-hero-icon">🩺</div><div><div class="nadi-hero-title">Nadi Pariksha Camp — Art of Living Bhiwadi</div><div class="nadi-hero-sub">Ancient pulse diagnosis (Nadi Pariksha) is an Ayurvedic science that reads your body's health through the pulse. Join this special wellness camp facilitated by <strong>Art of Living Bhiwadi</strong>.</div></div></div>
+    <div class="nadi-info-grid">
+      <div class="nadi-info-tile"><div class="nadi-tile-icon">📅</div><div><div class="nadi-tile-label">Date</div><div class="nadi-tile-val">Saturday, 24th May 2026</div></div></div>
+      <div class="nadi-info-tile"><div class="nadi-tile-icon">🕗</div><div><div class="nadi-tile-label">Timing</div><div class="nadi-tile-val">8:00 AM – 5:00 PM</div></div></div>
+      <div class="nadi-info-tile"><div class="nadi-tile-icon">📍</div><div><div class="nadi-tile-label">Venue</div><div class="nadi-tile-val">Ashiana Town, Bhiwadi</div></div></div>
+      <div class="nadi-info-tile"><div class="nadi-tile-icon">💰</div><div><div class="nadi-tile-label">Fees</div><div class="nadi-tile-val">₹250 per person</div></div></div>
+      <div class="nadi-info-tile"><div class="nadi-tile-icon">⏱️</div><div><div class="nadi-tile-label">Slot Duration</div><div class="nadi-tile-val">12 minutes per person</div></div></div>
+      <div class="nadi-info-tile"><div class="nadi-tile-icon">🏛️</div><div><div class="nadi-tile-label">Facilitated By</div><div class="nadi-tile-val">Art of Living Bhiwadi</div></div></div>
+    </div>
+    <div class="nadi-alert"><span style="font-size:20px;flex-shrink:0;">⚠️</span><div><strong>Important:</strong> Please come <strong>empty stomach</strong> or ensure no food at least <strong>2 hours before</strong> your slot for accurate Nadi diagnosis.</div></div>
+    <div class="nadi-form-wrap">
+      <div class="nadi-form-title">📋 Register Your Interest</div>
+      <div class="nadi-form-sub">Fill in your details to register interest. You will be contacted with slot confirmation.</div>
+      <div class="nadi-two-col">
+        <div class="nadi-field"><label class="nadi-label" for="nadi-name">Full Name <span class="req">*</span></label><input class="nadi-input" type="text" id="nadi-name" placeholder="Your full name"/></div>
+        <div class="nadi-field"><label class="nadi-label" for="nadi-phone">Mobile Number <span class="req">*</span></label><input class="nadi-input" type="tel" id="nadi-phone" placeholder="10-digit mobile" maxlength="10"/></div>
+      </div>
+      <div class="nadi-two-col">
+        <div class="nadi-field"><label class="nadi-label">Gender <span class="req">*</span></label><div class="nadi-radio-group"><label class="nadi-radio-label"><input type="radio" name="nadi-gender" value="Male"/> Male</label><label class="nadi-radio-label"><input type="radio" name="nadi-gender" value="Female"/> Female</label><label class="nadi-radio-label"><input type="radio" name="nadi-gender" value="Other"/> Other</label></div></div>
+        <div class="nadi-field"><label class="nadi-label" for="nadi-age">Age <span class="req">*</span></label><input class="nadi-input" type="number" id="nadi-age" placeholder="Your age" min="1" max="120"/></div>
+      </div>
+      <div class="nadi-field">
+        <label class="nadi-label" for="nadi-slot">Preferred Time Slot <span class="req">*</span></label>
+        <select class="nadi-select" id="nadi-slot">
+          <option value="">— Select your preferred time slot —</option>
+          <option>08:00 AM – 08:12 AM</option><option>08:12 AM – 08:24 AM</option><option>08:24 AM – 08:36 AM</option><option>08:36 AM – 08:48 AM</option><option>08:48 AM – 09:00 AM</option>
+          <option>09:00 AM – 09:12 AM</option><option>09:12 AM – 09:24 AM</option><option>09:24 AM – 09:36 AM</option><option>09:36 AM – 09:48 AM</option><option>09:48 AM – 10:00 AM</option>
+          <option>10:00 AM – 10:12 AM</option><option>10:12 AM – 10:24 AM</option><option>10:24 AM – 10:36 AM</option><option>10:36 AM – 10:48 AM</option><option>10:48 AM – 11:00 AM</option>
+          <option>11:00 AM – 11:12 AM</option><option>11:12 AM – 11:24 AM</option><option>11:24 AM – 11:36 AM</option><option>11:36 AM – 11:48 AM</option><option>11:48 AM – 12:00 PM</option>
+          <option>12:00 PM – 12:12 PM</option><option>12:12 PM – 12:24 PM</option><option>12:24 PM – 12:36 PM</option><option>12:36 PM – 12:48 PM</option><option>12:48 PM – 01:00 PM</option>
+          <option>01:00 PM – 01:12 PM</option><option>01:12 PM – 01:24 PM</option><option>01:24 PM – 01:36 PM</option><option>01:36 PM – 01:48 PM</option><option>01:48 PM – 02:00 PM</option>
+          <option>02:00 PM – 02:12 PM</option><option>02:12 PM – 02:24 PM</option><option>02:24 PM – 02:36 PM</option><option>02:36 PM – 02:48 PM</option><option>02:48 PM – 03:00 PM</option>
+          <option>03:00 PM – 03:12 PM</option><option>03:12 PM – 03:24 PM</option><option>03:24 PM – 03:36 PM</option><option>03:36 PM – 03:48 PM</option><option>03:48 PM – 04:00 PM</option>
+          <option>04:00 PM – 04:12 PM</option><option>04:12 PM – 04:24 PM</option><option>04:24 PM – 04:36 PM</option><option>04:36 PM – 04:48 PM</option><option>04:48 PM – 05:00 PM</option>
+        </select>
+      </div>
+      <button class="nadi-submit-btn" id="nadi-submit-btn" onclick="submitNadiForm()">✅ Submit My Interest — Nadi Pariksha Camp</button>
+      <div class="nadi-success-msg" id="nadi-success">🙏 <strong>Thank you! Your interest has been registered.</strong><br>You will be contacted to confirm your slot. Come empty stomach or 2 hours after last meal. <em>Jai Gurudev!</em></div>
+      <div class="nadi-error-msg" id="nadi-error"></div>
+    </div>
+    <div class="nadi-share-cta"><p>📲 Share this form with friends &amp; family in Bhiwadi!</p><button class="nadi-share-link" onclick="shareNadiLink()">📋 Copy Form Link</button><div id="nadi-share-copied" style="display:none;font-size:12px;color:#4CAF50;margin-top:8px;font-weight:600;">✅ Link copied!</div></div>
+  </section>
+
+  <!-- CELEBRATIONS SECTION -->
+  <section id="celebrations">
+    <div class="section-header"><div class="section-label">🎂 Celebrations — Birthdays &amp; Anniversaries</div><div class="section-line"></div></div>
+    <div class="celeb-section-wrap">
+      <div class="celeb-tabs">
+        <button class="celeb-tab active" onclick="showCelebTab('today',this)">🎉 Today's Celebrations</button>
+        <button class="celeb-tab" onclick="showCelebTab('upcoming',this)">📅 Upcoming 7 Days</button>
+        <button class="celeb-tab" onclick="showCelebTab('members',this)">👥 All Members</button>
+        <button class="celeb-tab" onclick="showCelebTab('register',this)">➕ Register My Details</button>
+      </div>
+      <!-- TODAY -->
+      <div class="celeb-panel active" id="celeb-tab-today">
+        <div class="today-celeb-banner">
+          <div class="today-celeb-title">🎂 Today's Special Celebrations 🎂</div>
+          <div id="today-celeb-content"><div class="celeb-loading">Loading celebrations...</div></div>
+        </div>
+        <p style="font-size:13px;color:#888;text-align:center;">Click "Send Wishes" to open WhatsApp with a ready-made Jai Gurudev message.</p>
+      </div>
+      <!-- UPCOMING -->
+      <div class="celeb-panel" id="celeb-tab-upcoming">
+        <div class="today-celeb-banner">
+          <div class="today-celeb-title">📅 Upcoming — Next 7 Days</div>
+          <div id="upcoming-celeb-content"><div class="celeb-loading">Loading...</div></div>
+        </div>
+      </div>
+      <!-- MEMBERS -->
+      <div class="celeb-panel" id="celeb-tab-members">
+        <div class="member-list-wrap">
+          <table class="member-table">
+            <thead><tr><th>#</th><th>Name</th><th>Address</th><th>Birthday</th><th>Anniversary</th><th>Soon</th><th>Wish</th></tr></thead>
+            <tbody id="members-table-body"><tr><td colspan="7" style="text-align:center;padding:1.5rem;color:#E91E8C;font-style:italic;">Loading members...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+      <!-- REGISTER -->
+      <div class="celeb-panel" id="celeb-tab-register">
+        <div class="celeb-form-wrap">
+          <div class="celeb-form-title">🌸 Register Your Details</div>
+          <div class="celeb-form-sub">Share your details so the AoL Bhiwadi family can celebrate your special days with you! 🙏</div>
+          <div class="celeb-two-col">
+            <div class="celeb-field"><label class="celeb-label" for="cel-name">Full Name <span class="req">*</span></label><input class="celeb-input" type="text" id="cel-name" placeholder="Your full name"/></div>
+            <div class="celeb-field"><label class="celeb-label" for="cel-phone">Mobile <span class="req">*</span></label><input class="celeb-input" type="tel" id="cel-phone" placeholder="10-digit mobile" maxlength="10"/></div>
+          </div>
+          <div class="celeb-field"><label class="celeb-label" for="cel-address">Address <span class="req">*</span></label><input class="celeb-input" type="text" id="cel-address" placeholder="Your locality in Bhiwadi"/></div>
+          <div class="celeb-field">
+            <label class="celeb-label">Date of Birth <span class="req">*</span></label>
+            <div class="celeb-three-col">
+              <select class="celeb-select" id="cel-dob-day"><option value="">Day</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option></select>
+              <select class="celeb-select" id="cel-dob-month"><option value="">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
+              <input class="celeb-input" type="number" id="cel-dob-year" placeholder="Year e.g. 1985" min="1920" max="2020"/>
+            </div>
+            <div style="font-size:11px;color:#aaa;margin-top:4px;">💡 Year optional — day &amp; month required</div>
+          </div>
+          <div class="celeb-field">
+            <label class="celeb-label">Anniversary <span style="font-size:10px;color:#aaa;font-weight:400;text-transform:none;">(optional)</span></label>
+            <div class="celeb-three-col">
+              <select class="celeb-select" id="cel-ann-day"><option value="">Day</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option></select>
+              <select class="celeb-select" id="cel-ann-month"><option value="">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
+              <input class="celeb-input" type="number" id="cel-ann-year" placeholder="Year e.g. 2010" min="1950" max="2025"/>
+            </div>
+          </div>
+          <div class="celeb-field"><label class="celeb-label" for="cel-email">Email <span style="font-size:10px;color:#aaa;font-weight:400;text-transform:none;">(optional)</span></label><input class="celeb-input" type="email" id="cel-email" placeholder="your@email.com"/></div>
+          <button class="celeb-submit-btn" id="celeb-submit-btn" onclick="submitCelebForm()">🎂 Register My Birthday &amp; Anniversary Details</button>
+          <div class="celeb-success" id="celeb-success">🎉 <strong>Thank you! Registered successfully.</strong><br>We will celebrate your special days with you. <em>Jai Gurudev! 🙏</em></div>
+          <div class="celeb-error" id="celeb-error"></div>
+        </div>
+        <div class="celeb-share-box">
+          <p>📲 Share the Birthday &amp; Anniversary registration link with all members!</p>
+          <button class="celeb-share-btn" onclick="shareCelebLink()">📋 Copy Link</button>
+          <button class="wa-share-btn" onclick="shareCelebWhatsApp()">💬 Share on WhatsApp</button>
+          <div id="celeb-link-copied" style="display:none;font-size:12px;color:#4CAF50;margin-top:8px;font-weight:600;">✅ Link copied!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities">
+    <div class="section-header"><div class="section-label">Regular Activities</div><div class="section-line"></div></div>
+    <div class="activities-grid">
+      <div class="activity-card"><div class="activity-icon">🕯️</div><div class="activity-name">Morning Sadhana</div><div class="activity-when">Mon–Fri · 6:30 AM</div><div class="activity-spots">Free · Open to all</div></div>
+      <div class="activity-card"><div class="activity-icon">🫁</div><div class="activity-name">Pranayama Drop-in</div><div class="activity-when">Every Tuesday · 7:00 PM</div><div class="activity-spots">Limited seats</div></div>
+      <div class="activity-card"><div class="activity-icon">📻</div><div class="activity-name">Satsang &amp; Singing</div><div class="activity-when">Every Sunday · 10:00 AM</div><div class="activity-spots">All welcome · Free</div></div>
+      <div class="activity-card"><div class="activity-icon">🎤</div><div class="activity-name">Q&amp;A with Ashish Ji</div><div class="activity-when">Last Saturday · 6:00 PM</div><div class="activity-spots">Free · All welcome</div></div>
+    </div>
+  </section>
+  <div class="quote-strip">🙏 &nbsp;"Breath is the bridge between the body and the mind. When you master your breath, you master your life."<span style="display:block;font-size:13px;margin-top:10px;font-style:normal;font-family:'Jost',sans-serif;letter-spacing:0.1em;color:var(--green-dark);font-weight:500;">— Sri Sri Ravi Shankar Ji</span></div>
+  <section id="knowledge">
+    <div class="section-header"><div class="section-label">Knowledge Space</div><div class="section-line"></div></div>
+    <div class="knowledge-grid">
+      <div class="article-card feat-article"><div class="feat-visual"><div class="feat-visual-symbol">🌸</div><div class="feat-visual-caption">Featured · 7 min read</div></div><div class="feat-article-body"><div class="article-cat cat-insight">Featured Insight</div><div class="article-title">What is Sudarshan Kriya — and why millions practice it daily</div><div class="article-excerpt">The rhythmic breathing technique at the heart of the Art of Living — the science, the experience, and why it continues to change lives across 180 countries.</div><a class="reg-btn-full" href="https://www.artofliving.org/in-en/sudarshan-kriya" target="_blank" style="margin-top:16px;display:inline-block;width:auto;padding:10px 22px;">Read &amp; Explore →</a></div></div>
+      <div class="article-card"><div class="article-cat cat-practice">Practice Guide</div><div class="article-title">The 3-part breath: a beginner's guide to pranayama</div><div class="article-excerpt">Simple yogic breathing exercises that can reduce cortisol, sharpen focus, and restore calm.</div><span class="article-read">5 min read →</span></div>
+      <div class="article-card"><div class="article-cat cat-science">The Science</div><div class="article-title">What neuroscience says about mantra-based meditation</div><div class="article-excerpt">Research on Sahaj Samadhi shows measurable reductions in anxiety and improved sleep quality after just two weeks.</div><span class="article-read">6 min read →</span></div>
+      <div class="article-card"><div class="article-cat cat-guide">For Parents</div><div class="article-title">Why mindfulness in childhood changes everything</div><div class="article-excerpt">Children who learn breath awareness early show greater emotional resilience, focus, and empathy.</div><span class="article-read">4 min read →</span></div>
+      <div class="article-card"><div class="article-cat cat-insight">Wisdom</div><div class="article-title">Happiness is not a destination — it is a daily practice</div><div class="article-excerpt">Reflections from the Happiness Program on what joy really means and how consistent inner work brings it back.</div><span class="article-read">4 min read →</span></div>
+    </div>
+  </section>
+  <section id="testimonials">
+    <div class="section-header"><div class="section-label">What Our Participants Say</div><div class="section-line"></div></div>
+    <div class="sub-section-title">🎥 Video Testimonials</div>
+    <div class="updation-notice"><div class="updation-icon">🔄</div><div><div class="updation-title">Video Testimonials — Under Updation</div><div class="updation-desc">Participant video testimonials are being collected and will be uploaded here shortly. 🙏</div></div></div>
+    <div class="sub-section-title">✍️ Written Testimonials</div>
+    <div class="updation-notice"><div class="updation-icon">🔄</div><div><div class="updation-title">Written Testimonials — Under Updation</div><div class="updation-desc">Participant feedback being compiled and will be added soon. 🙏</div></div></div>
+    <div class="add-cta"><div style="font-size:32px">🌿</div><h4>Share Your Experience</h4><p>Have you attended one of Ashish Ji's programs? Your story can inspire others.</p><div class="under-updation-btn" style="margin-top:6px;padding:12px 28px;font-size:14px;width:auto;display:inline-block;">🔄 Submission Form — Under Updation</div></div>
+  </section>
+  <section id="survey">
+    <div class="section-header"><div class="section-label">Discover Your Happiness</div><div class="section-line"></div></div>
+    <div class="happiness-survey-card">
+      <div class="survey-left"><div class="survey-emoji">😊</div><div class="survey-badge">Free · 2 minutes</div></div>
+      <div class="survey-body">
+        <div class="eyebrow">Art of Living · Official Assessment</div>
+        <h3 class="survey-title">How Happy Are You?</h3>
+        <p class="survey-desc">Take the official Art of Living Happiness Survey — a quick, science-based assessment to understand your current wellbeing.</p>
+        <a class="survey-btn" href="https://my.artofliving.org/happiness-survey-form?uuid=5Fcue8g7LA==" target="_blank">Take the Happiness Survey →</a>
+      </div>
+    </div>
+  </section>
+  <section id="connect">
+    <div class="newsletter">
+      <div style="font-size:36px">🪷</div>
+      <h3>Stay Connected with Ashish Ji</h3>
+      <p>Receive updates on upcoming programs, batch dates, free sessions, and weekly wisdom on breath, meditation, and inner wellbeing.</p>
+      <div class="nl-row"><input class="nl-input" type="email" placeholder="Your email address"/><button class="btn-primary" onclick="this.textContent='Joined ✓';this.style.background='var(--green-dark)';this.disabled=true;">Join →</button></div>
+      <div class="contact-chips">
+        <a class="contact-chip" href="tel:+919772208636" style="text-decoration:none;">📞 +91 97722 08636</a>
+        <a class="contact-chip" href="mailto:ashishkumar.artofliving@gmail.com" style="text-decoration:none;">✉ ashishkumar.artofliving@gmail.com</a>
+        <a class="contact-chip" href="https://wa.me/919772208636" target="_blank" style="text-decoration:none;background:#E9F7EF;border-color:#27AE60;color:#1E8449;">💬 WhatsApp</a>
+        <span class="contact-chip">🌐 artofliving.org</span>
+      </div>
+    </div>
+  </section>
+</div>
+<footer>
+  <span class="footer-lotus">🪷</span>
+  <p><strong>Ashish Kumar</strong> · Art of Living Faculty · Bhiwadi</p>
+  <p>📞 +91 97722 08636 · ✉ ashishkumar.artofliving@gmail.com</p>
+  <p>All programs under the <strong>Art of Living Foundation</strong> · artofliving.org</p>
+  <p style="margin-top:6px;">© 2026 Ashish Kumar · Jai Gurudev 🙏</p>
+</footer>
+<script>
+function filterCards(tag,btn){document.querySelectorAll('.filter-tag').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('#all-courses .course-card').forEach(c=>{c.style.display=(tag==='all'||c.dataset.tags.includes(tag))?'flex':'none';});}
+const scrollBtn=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>{scrollBtn.classList.toggle('visible',window.scrollY>400);});
+document.querySelectorAll('.nadi-radio-label').forEach(l=>{l.querySelector('input').addEventListener('change',()=>{document.querySelectorAll('.nadi-radio-label').forEach(x=>x.classList.remove('selected'));l.classList.add('selected');});});
+const NADI_URL='https://script.google.com/macros/s/AKfycbxH6UqfI2UQES5CtVcaLmunqjm9lqTvtqGmTfhD_afMU-i5C6Sfq84YcAWXyU_9cd5q/exec';
+function submitNadiForm(){
+  const name=document.getElementById('nadi-name').value.trim();
+  const phone=document.getElementById('nadi-phone').value.trim();
+  const gender=document.querySelector('input[name="nadi-gender"]:checked');
+  const age=document.getElementById('nadi-age').value.trim();
+  const slot=document.getElementById('nadi-slot').value;
+  const err=document.getElementById('nadi-error');const suc=document.getElementById('nadi-success');
+  err.className='nadi-error-msg';suc.className='nadi-success-msg';
+  if(!name){err.textContent='Please enter your full name.';err.className='nadi-error-msg show';return;}
+  if(!phone||phone.length!==10||!/^\d+$/.test(phone)){err.textContent='Please enter a valid 10-digit mobile number.';err.className='nadi-error-msg show';return;}
+  if(!gender){err.textContent='Please select your gender.';err.className='nadi-error-msg show';return;}
+  if(!age){err.textContent='Please enter your age.';err.className='nadi-error-msg show';return;}
+  if(!slot){err.textContent='Please select a time slot.';err.className='nadi-error-msg show';return;}
+  const btn=document.getElementById('nadi-submit-btn');btn.disabled=true;btn.textContent='Submitting…';
+  const payload={name,phone,gender:gender.value,age,slot,timestamp:new Date().toLocaleString('en-IN',{timeZone:'Asia/Kolkata'})};
+  const done=()=>{btn.disabled=false;btn.textContent='✅ Submit My Interest — Nadi Pariksha Camp';suc.className='nadi-success-msg show';document.getElementById('nadi-name').value='';document.getElementById('nadi-phone').value='';document.querySelectorAll('input[name="nadi-gender"]').forEach(r=>r.checked=false);document.querySelectorAll('.nadi-radio-label').forEach(l=>l.classList.remove('selected'));document.getElementById('nadi-age').value='';document.getElementById('nadi-slot').value='';};
+  const params = new URLSearchParams();
+  Object.keys(payload).forEach(k => params.append(k, payload[k]));
+  fetch(NADI_URL + '?' + params.toString(), {method:'GET', mode:'no-cors'})
+    .then(done)
+    .catch(() => {
+      btn.disabled=false;
+      btn.textContent='✅ Submit My Interest — Nadi Pariksha Camp';
+      err.textContent='Submission failed. Please contact us on WhatsApp.';
+      err.className='nadi-error-msg show';
+    });
+}
+function shareNadiLink(){const url=window.location.href.split('#')[0]+'#nadi-pariksha';if(navigator.clipboard){navigator.clipboard.writeText(url).then(()=>{const el=document.getElementById('nadi-share-copied');el.style.display='block';setTimeout(()=>el.style.display='none',3000);});}else{prompt('Copy link:',url);}}
+const CELEB_URL='https://script.google.com/macros/s/AKfycbz1nXnhRCORI5HWHzrPqVnMo95rxzbVcxS3j63TXtK1oOpxFnHEmK0eIJSFkq0SC0AQ/exec';
+const MONTHS_S=['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const MONTHS_F=['','January','February','March','April','May','June','July','August','September','October','November','December'];
+function showCelebTab(tab,btn){document.querySelectorAll('.celeb-tab').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.celeb-panel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById('celeb-tab-'+tab).classList.add('active');if(tab==='today')loadTodayCelebrations();if(tab==='upcoming')loadUpcomingCelebrations();if(tab==='members')loadMembersTable();}
+let _cache=null;
+async function fetchMembers(){if(_cache)return _cache;// Live mode — fetching from Google Sheetstry{const r=await fetch(CELEB_URL+'?action=list');const d=await r.json();_cache=d.members||[];return _cache;}catch(e){return getDemoMembers();}}
+function getDemoMembers(){const t=new Date();return[{name:'Ashish Kumar',phone:'9772208636',address:'Bhiwadi',dob_day:t.getDate(),dob_month:t.getMonth()+1,dob_year:1980,ann_day:15,ann_month:6,ann_year:2005},{name:'Sample Member',phone:'9999999999',address:'Ashiana Town',dob_day:t.getDate(),dob_month:t.getMonth()+1,dob_year:1990,ann_day:'',ann_month:'',ann_year:''}];}
+function daysUntil(d,m){if(!d||!m)return null;const today=new Date();const y=today.getFullYear();let next=new Date(y,m-1,d);if(next<today)next=new Date(y+1,m-1,d);const todayMid=new Date(today.getFullYear(),today.getMonth(),today.getDate());return Math.round((next-todayMid)/(864e5));}
+function isToday(d,m){return daysUntil(d,m)===0;}
+function buildWishLink(member,type){const emoji=type==='Birthday'?'🎂':'💍';const msg=type==='Birthday'?`${emoji} Happy Birthday ${member.name} ji! 🙏\nWishing you a wonderful birthday filled with joy, peace and Gurudev's blessings.\nJai Gurudev! 🪷\n— Art of Living Bhiwadi Family`:`${emoji} Happy Wedding Anniversary ${member.name} ji! 🙏\nMay your life together be filled with love, joy and Gurudev's blessings.\nJai Gurudev! 🪷\n— Art of Living Bhiwadi Family`;return member.phone?'https://wa.me/91'+member.phone+'?text='+encodeURIComponent(msg):'https://wa.me/?text='+encodeURIComponent(msg);}
+function renderCard(member,type,days){const wishLink=buildWishLink(member,type);const label=days===0?'🎉 TODAY!':'in '+days+' day'+(days>1?'s':'');const d=type==='Birthday'?member.dob_day:member.ann_day;const m=type==='Birthday'?member.dob_month:member.ann_month;const y=type==='Birthday'?member.dob_year:member.ann_year;const age=y?(new Date().getFullYear()-y):'';return '<div class="celeb-member-card"><div style="font-size:28px">'+(type==='Birthday'?'🎂':'💍')+'</div><div class="celeb-member-name">'+member.name+'</div><div class="celeb-member-type">'+type+' — '+label+'</div><div class="celeb-member-age">'+MONTHS_S[parseInt(m)]+' '+d+(age?' · Turns '+age:'')+'</div><a class="celeb-wish-btn" href="'+wishLink+'" target="_blank">💬 Send Wishes</a></div>';}
+async function loadTodayCelebrations(){const c=document.getElementById('today-celeb-content');c.innerHTML='<div class="celeb-loading">Loading...</div>';const members=await fetchMembers();let cards='';members.forEach(m=>{if(isToday(m.dob_day,m.dob_month))cards+=renderCard(m,'Birthday',0);if(m.ann_day&&isToday(m.ann_day,m.ann_month))cards+=renderCard(m,'Anniversary',0);});c.innerHTML=cards?'<div class="celeb-cards-row">'+cards+'</div>':'<div class="no-celeb-msg">🌸 No birthdays or anniversaries today.<br>Have a peaceful, blessed day! 🙏 Jai Gurudev!</div>';}
+async function loadUpcomingCelebrations(){const c=document.getElementById('upcoming-celeb-content');c.innerHTML='<div class="celeb-loading">Loading...</div>';const members=await fetchMembers();let items=[];members.forEach(m=>{const bd=daysUntil(m.dob_day,m.dob_month);if(bd!==null&&bd>0&&bd<=7)items.push({member:m,type:'Birthday',days:bd});const ad=daysUntil(m.ann_day,m.ann_month);if(ad!==null&&ad>0&&ad<=7)items.push({member:m,type:'Anniversary',days:ad});});items.sort((a,b)=>a.days-b.days);const cards=items.map(i=>renderCard(i.member,i.type,i.days)).join('');c.innerHTML=cards?'<div class="celeb-cards-row">'+cards+'</div>':'<div class="no-celeb-msg">🌸 No upcoming celebrations in the next 7 days.<br>Jai Gurudev! 🙏</div>';}
+async function loadMembersTable(){const tbody=document.getElementById('members-table-body');tbody.innerHTML='<tr><td colspan="7" style="text-align:center;padding:1.5rem;color:#E91E8C;font-style:italic;">Loading...</td></tr>';const members=await fetchMembers();if(!members.length){tbody.innerHTML='<tr><td colspan="7" style="text-align:center;padding:1.5rem;color:#888;">No members yet.</td></tr>';return;}tbody.innerHTML=members.map((m,i)=>{const dob=(m.dob_day&&m.dob_month)?m.dob_day+' '+MONTHS_S[parseInt(m.dob_month)]+(m.dob_year?' '+m.dob_year:''):'—';const ann=(m.ann_day&&m.ann_month)?m.ann_day+' '+MONTHS_S[parseInt(m.ann_month)]+(m.ann_year?' '+m.ann_year:''):'—';const bd=daysUntil(m.dob_day,m.dob_month);const ad=daysUntil(m.ann_day,m.ann_month);const badge=(bd!==null&&bd<=7?'<span class="badge-bday">'+(bd===0?'Today!':bd+'d')+'</span> ':'')+(ad!==null&&ad<=7?'<span class="badge-anniv">'+(ad===0?'Today!':ad+'d')+'</span>':'');return '<tr><td>'+(i+1)+'</td><td><strong>'+m.name+'</strong></td><td style="font-size:12px;color:#666;">'+(m.address||'—')+'</td><td>'+dob+'</td><td>'+ann+'</td><td>'+(badge||'—')+'</td><td class="wish-cell"><a href="'+buildWishLink(m,'Birthday')+'" target="_blank">💬 Wish</a></td></tr>';}).join('');}
+async function submitCelebForm(){
+  const name=document.getElementById('cel-name').value.trim();
+  const phone=document.getElementById('cel-phone').value.trim();
+  const address=document.getElementById('cel-address').value.trim();
+  const dobDay=document.getElementById('cel-dob-day').value;
+  const dobMon=document.getElementById('cel-dob-month').value;
+  const dobYear=document.getElementById('cel-dob-year').value;
+  const annDay=document.getElementById('cel-ann-day').value;
+  const annMon=document.getElementById('cel-ann-month').value;
+  const annYear=document.getElementById('cel-ann-year').value;
+  const email=document.getElementById('cel-email').value.trim();
+  const err=document.getElementById('celeb-error');const suc=document.getElementById('celeb-success');
+  err.className='celeb-error';suc.className='celeb-success';
+  if(!name){err.textContent='Please enter your full name.';err.className='celeb-error show';return;}
+  if(!phone||phone.length!==10||!/^\d+$/.test(phone)){err.textContent='Please enter a valid 10-digit mobile number.';err.className='celeb-error show';return;}
+  if(!address){err.textContent='Please enter your address.';err.className='celeb-error show';return;}
+  if(!dobDay||!dobMon){err.textContent='Please select your birthday day and month.';err.className='celeb-error show';return;}
+  const btn=document.getElementById('celeb-submit-btn');btn.disabled=true;btn.textContent='Registering...';
+  const payload={name,phone,address,dob_day:dobDay,dob_month:dobMon,dob_year:dobYear||'',dob_full:dobDay+' '+MONTHS_F[parseInt(dobMon)]+(dobYear?' '+dobYear:''),ann_day:annDay||'',ann_month:annMon||'',ann_year:annYear||'',ann_full:(annDay&&annMon)?annDay+' '+MONTHS_F[parseInt(annMon)]+(annYear?' '+annYear:''):'',email,timestamp:new Date().toLocaleString('en-IN',{timeZone:'Asia/Kolkata'})};
+  const done=()=>{btn.disabled=false;btn.textContent='🎂 Register My Birthday & Anniversary Details';suc.className='celeb-success show';_cache=null;['cel-name','cel-phone','cel-address','cel-dob-year','cel-ann-year','cel-email'].forEach(id=>document.getElementById(id).value='');['cel-dob-day','cel-dob-month','cel-ann-day','cel-ann-month'].forEach(id=>document.getElementById(id).value='');};
+  const fail=()=>{btn.disabled=false;btn.textContent='🎂 Register My Birthday & Anniversary Details';err.textContent='Submission failed. Please try again or contact us on WhatsApp.';err.className='celeb-error show';};
+  const cParams = new URLSearchParams();
+  Object.keys(payload).forEach(k => cParams.append(k, payload[k]));
+  fetch(CELEB_URL + '?' + cParams.toString(), {method:'GET', mode:'no-cors'})
+    .then(done)
+    .catch(fail);
+}
+function shareCelebLink(){const url=window.location.href.split('#')[0]+'#celebrations';if(navigator.clipboard){navigator.clipboard.writeText(url).then(()=>{const el=document.getElementById('celeb-link-copied');el.style.display='block';setTimeout(()=>el.style.display='none',3000);});}else{prompt('Copy link:',url);}}
+function shareCelebWhatsApp(){const url=window.location.href.split('#')[0]+'#celebrations';const msg='🎂 Register your Birthday & Anniversary with Art of Living Bhiwadi family!\n\nFill your details here:\n'+url+'\n\nJai Gurudev! 🙏🪷';window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank');}
+window.addEventListener('load',()=>{loadTodayCelebrations();});
+</script>
+</body>
+</html>
